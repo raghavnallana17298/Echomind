@@ -10,7 +10,7 @@ from gtts import gTTS  # Import gTTS for text-to-speech
 import os
 
 # Load the trained emotion detection model
-model = load_model(r'C:\Users\ragha\audio\Audio\cnn_audio_model.h5')
+model = load_model('cnn_audio_model.h5')
 
 # Define the class names and their corresponding indices
 class_names = {
@@ -25,7 +25,7 @@ class_names = {
 
 # Load the label encoder classes
 try:
-    label_encoder_classes = np.load(r'C:\Users\ragha\audio\Audio\label_encoder_classes.npy')
+    label_encoder_classes = np.load('label_encoder_classes.npy')
     label_encoder = LabelEncoder()
     label_encoder.classes_ = label_encoder_classes
 except FileNotFoundError:
